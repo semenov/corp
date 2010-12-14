@@ -5,7 +5,8 @@ gem 'mongoid', '2.0.0.beta.20'
 gem 'bson_ext', '1.1.4' 
 gem 'slim', :require => 'slim/rails'
 gem 'slim-rails'
-
+gem 'rdiscount'
+gem 'carrierwave'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

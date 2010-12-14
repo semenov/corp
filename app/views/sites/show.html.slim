@@ -5,4 +5,14 @@ h1
 p
   = @site.description
 
-= link_to 'Edit', edit_site_path(@site)
+.controls
+  = link_to 'Редактировать', edit_site_path(@site)
+
+ol.blocks
+  - @site.ordered_blocks.each do |block|
+    li.block
+      = render block
+
+ul
+  li
+    = link_to 'Добавить текстовый блок', new_site_text_block_path(@site)
