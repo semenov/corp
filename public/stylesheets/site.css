@@ -24,6 +24,12 @@
     #blocks .image_block .description {
       font-style: italic;
       color: #777777; }
+  #blocks .file_block .file {
+    font-size: 1.6em;
+    padding-bottom: 5px; }
+  #blocks .file_block .description {
+    font-style: italic;
+    color: #777777; }
 
 textarea, input[type=text], label {
   width: 100%;

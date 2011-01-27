@@ -14,9 +14,11 @@
       li.block
         = render :partial => 'blocks/controls', :locals => { :block => block }
         = render block
-
   ul
     li
-      = link_to '+ текстовый блок', new_site_text_block_path(@site)
+      = link_to '+ Текст', new_site_text_block_path(@site)
     li
-      = link_to '+ блок с изображением', new_site_image_block_path(@site)
+      = link_to '+ Изображение', new_site_image_block_path(@site)
+      
+    li
+      = link_to '+ Файл', new_site_file_block_path(@site)
