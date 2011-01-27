@@ -1,0 +1,30 @@
+#wrapper {
+  width: 500px;
+  margin: 0 auto; }
+
+#blocks {
+  list-style-type: none;
+  padding: 0; }
+  #blocks .block_controls {
+    position: absolute;
+    margin-left: -30px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center; }
+    #blocks .block_controls li {
+      padding-bottom: 3px; }
+      #blocks .block_controls li a {
+        text-decoration: none;
+        font-size: 1.4em;
+        font-weight: bold; }
+  #blocks .block {
+    padding-bottom: 20px; }
+  #blocks .image_block {
+    text-align: center; }
+    #blocks .image_block .description {
+      font-style: italic;
+      color: #777777; }
+
+textarea, input[type=text], label {
+  width: 100%;
+  display: block; }

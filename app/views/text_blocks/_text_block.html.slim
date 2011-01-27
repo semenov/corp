@@ -1,11 +1,4 @@
-= markdown text_block.content
+.text_block
+  = markdown text_block.content
 
-ul.block_controls
-  li
-    = link_to 'Вверх', move_up_site_block_url(:site_id => @site.id, :id => text_block.id)
-  li
-    = link_to 'Вниз', move_down_site_block_url(:site_id => @site.id, :id => text_block.id)
-  li
-    = link_to 'Редактировать', edit_polymorphic_path([@site, text_block])
-  li
-    = link_to 'Удалить', [@site, text_block], :method => :delete
+

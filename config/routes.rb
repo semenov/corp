@@ -1,6 +1,7 @@
 Corp::Application.routes.draw do
   resources :sites do
     resources :text_blocks
+    resources :image_blocks
     resources :blocks do
       member do
         get 'move_up'

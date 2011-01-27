@@ -1,18 +1,22 @@
-p#notice = notice
+#site
+  p#notice = notice
 
-h1
-  = @site.title
-p
-  = @site.description
+  h1
+    = @site.title
+  p
+    = @site.description
 
-.controls
-  = link_to 'Редактировать', edit_site_path(@site)
+  .controls
+    = link_to 'Настройки', edit_site_path(@site)
 
-ol.blocks
-  - @site.ordered_blocks.each do |block|
-    li.block
-      = render block
+  ol#blocks
+    - @site.ordered_blocks.each do |block|
+      li.block
+        = render :partial => 'blocks/controls', :locals => { :block => block }
+        = render block
 
-ul
-  li
-    = link_to 'Добавить текстовый блок', new_site_text_block_path(@site)
+  ul
+    li
+      = link_to '+ текстовый блок', new_site_text_block_path(@site)
+    li
+      = link_to '+ блок с изображением', new_site_image_block_path(@site)
