@@ -4,7 +4,7 @@ class BlocksController < ApplicationController
   before_filter :find_site
   
   def find_site
-    @site = Site.find(params[:site_id])
+    @site = Site.find_by_slug(params[:site_id])
   end
 
   def new

@@ -5,7 +5,7 @@ class SitesController < ApplicationController
   end
 
   def show
-    @site = Site.find(params[:id])
+    @site = Site.find_by_slug(params[:id])
   end
 
   def new
@@ -13,7 +13,7 @@ class SitesController < ApplicationController
   end
 
   def edit
-    @site = Site.find(params[:id])
+    @site = Site.find_by_slug(params[:id])
   end
 
   def create
@@ -26,7 +26,7 @@ class SitesController < ApplicationController
   end
 
   def update
-    @site = Site.find(params[:id])
+    @site = Site.find_by_slug(params[:id])
     if @site.update_attributes(params[:site])
       redirect_to(@site, :notice => 'Site was successfully updated.')
     else
@@ -35,7 +35,7 @@ class SitesController < ApplicationController
   end
 
   def destroy
-    @site = Site.find(params[:id])
+    @site = Site.find_by_slug(params[:id])
     @site.destroy
     redirect_to(sites_url)
   end

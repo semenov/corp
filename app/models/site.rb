@@ -21,4 +21,12 @@ class Site
     end
     return ordered
   end
+  
+  def to_param
+    slug
+  end
+  
+  def self.find_by_slug(slug)
+    first(:conditions => { :slug => slug })
+  end
 end
