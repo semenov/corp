@@ -1,0 +1,35 @@
+.contact_block
+  .title
+    = contact_block.title
+
+  .phone
+    | Телефон:
+    = contact_block.phone
+    
+  - if contact_block.additional_phone?
+    .additional_phone
+      | Дополнительный телефон:
+      = contact_block.additional_phone
+      
+  - if contact_block.fax?
+    .fax
+      | Факс:
+      = contact_block.fax
+          
+  .email
+    | Электронная почта:
+    = contact_block.email
+    
+  .address
+    | Адрес:
+    = contact_block.address
+    
+  .working_time
+    | Часы работы:
+    = contact_block.working_time
+    
+  - if contact_block.info?
+    .info
+      | Дополнительная информация:
+      = contact_block.info
+      

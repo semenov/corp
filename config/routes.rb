@@ -3,6 +3,7 @@ Corp::Application.routes.draw do
     resources :text_blocks
     resources :image_blocks
     resources :file_blocks
+    resources :contact_blocks
     resources :blocks do
       member do
         get 'move_up'

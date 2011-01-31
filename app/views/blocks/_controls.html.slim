@@ -2,8 +2,8 @@ ul.block_controls
   li
     = link_to raw('&uarr;'), move_up_site_block_url(:site_id => @site, :id => block.id)
   li
+    = link_to raw('&darr;'), move_down_site_block_url(:site_id => @site, :id => block.id)
+  li
     = link_to raw('&copy;'), edit_polymorphic_path([@site, block])
   li
     = link_to raw('&times;'), [@site, block], :method => :delete, :confirm => 'Вы уверены, что хотите удалить блок?'
-  li
-    = link_to raw('&darr;'), move_down_site_block_url(:site_id => @site, :id => block.id)

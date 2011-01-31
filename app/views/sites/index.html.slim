@@ -1,23 +1,12 @@
-h1 Listing sites
+h1 Сайты
 
-table
-  tr
-    th Title
-    th Slug
-    th Description
-    th
-    th
-    th
-
+table style="width:100%"
   - @sites.each do |site|
     tr
-      td= site.title
-      td= site.slug
-      td= site.description
-      td= link_to 'Show', site
-      td= link_to 'Edit', edit_site_path(site)
-      td= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete
+      td= link_to site.title, site
+      td= link_to raw('&copy;'), edit_site_path(site)
+      td= link_to raw('&times;'), site, :confirm => 'Вы уверены, что хотите удалить?', :method => :delete
 
 br
 
-= link_to 'New Site', new_site_path
+= link_to 'Создать сайт', new_site_path
